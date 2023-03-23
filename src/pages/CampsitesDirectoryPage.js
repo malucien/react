@@ -19,3 +19,5 @@ const CampsitesDirectoryPage = () => {
     </Container>
   );
 };
+
+export default CampsitesDirectoryPage
