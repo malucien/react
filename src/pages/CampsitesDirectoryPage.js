@@ -4,10 +4,18 @@ import CampsitesList from '../features/campsites/CampsitesList';
 import { selectRandomCampsite } from '../features/campsites/campsitesSlice';
 
 const CampsitesDirectoryPage = () => {
-  const selectedCampsite = selectRandomCampsite();
+  let selectedCampsite = selectRandomCampsite();
+
+  const toggleCampsite = () => {
+    selectedCampsite = selectRandomCampsite();
+    console.log(selectedCampsite);
+  };
 
   return (
     <Container>
+      <button onClick={() => toggleCampsite()}>
+        Select Random Campsite
+      </button>
       <Row>
         <Col sm = '5' md = '7'>
           <CampsitesList/>
