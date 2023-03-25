@@ -37,7 +37,17 @@ function AboutPage() {
           </Card>
         </Col>
         <Col sm='6'>
-          
+          <Card className='bg-light mt-3'>
+            <CardBody>
+              <blockquote className='blockquote'>
+                <p> 
+                  I will not follow where the path may lead, but I
+                  will go where there is no path, and I will leave
+                  a trail.
+                </p>
+              </blockquote>
+            </CardBody>
+          </Card>
         </Col>
       </Row>
     </Container>
