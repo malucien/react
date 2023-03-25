@@ -1,4 +1,6 @@
 import {Col, Row, Container, Card} from 'reactstrap';
+//import { SubHeader } from 
+
 
 function AboutPage() {
   return (
@@ -45,9 +47,21 @@ function AboutPage() {
                   will go where there is no path, and I will leave
                   a trail.
                 </p>
+                <footer className='blockquote-footer'>
+                  Muriel Strode,{' '}
+                  <cite title='Source Title'>
+                      "Wind-Wafted Wild Flowers" - The Open Court,
+                      1903
+                  </cite>
+                </footer>
               </blockquote>
             </CardBody>
           </Card>
+        </Col>
+      </Row>
+      <Row>
+        <Col xs='12'>
+          <h3> Community Partners. </h3>
         </Col>
       </Row>
     </Container>
