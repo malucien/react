@@ -1,18 +1,52 @@
-import React from 'react';
-import { Navbar, NavbarBrand } from 'reactstrap';
+import { useState } from 'react';
+import { 
+  Navbar, 
+  NavbarBrand,
+  NavbarToggler,
+  Collapse,
+  Nav,
+  NavItem
+} from 'reactstrap';
+import { NavLink} from 'react-router-dom';
 import NucampLogo from '../app/assets/img/logo.png';
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <Navbar dark sticky="top">
-      <div className="container">
-        <NavbarBrand href="/">
-          <img src={NucampLogo} height="30" width="30" alt="Nucamp Logo" />
-          Nucamp
-        </NavbarBrand>
-      </div>
+    <Navbar dark color='primary' sticky="top" expand='md'>
+      <NavbarBrand className='ms-5 ' href="/">
+        <img src={NucampLogo} height="30" width="30" alt="Nucamp Logo" className='float-start' />
+        <h1 className='mt-1'> Nucamp </h1> 
+      </NavbarBrand>
+
+      <NavbarToggler onClick={() => setMenuOpen(!menuOpen)}/>
+      <Collapse isOpen={menuOpen} navbar>
+        <Nav className='ms-auto ' navbar >
+          <NavItem >
+            <NavLink className='nav-link' to='/'>
+              <i className='fa fa-home fa-lg'/> Home
+            </NavLink>
+          </NavItem>
+          <NavItem >
+            <NavLink className='nav-link' to='/Directory'>
+              <i className='fa fa-list fa-lg'/> Directory
+            </NavLink>
+          </NavItem>
+          <NavItem >
+            <NavLink className='nav-link' to='/About'>
+              <i className='fa fa-info fa-lg'/> About
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink className='nav-link' to='/Contact'>
+              <i className='fa fa-address-card fa-lg'/> Contact
+            </NavLink>
+          </NavItem>
+        </Nav>
+      </Collapse>  
     </Navbar>
-  );
+  )
 };
 
 export default Header;
