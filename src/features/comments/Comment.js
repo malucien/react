@@ -5,9 +5,11 @@ const Comment = ({ comment }) => {
 
   return (
     <p>
-      {CommentText}
+      {text}
       <br/>
       {rating}/5 stars -- {author}, {formatDate(date)}
     </p>
   )
 }
+
+export default Comment;

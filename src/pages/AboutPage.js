@@ -1,9 +1,11 @@
 import {Col, Row, Container, Card, CardBody, CardHeader} from 'reactstrap';
+import SubHeader from "../components/SubHeader";
 
 
 function AboutPage() {
   return (
     <Container>
+      <SubHeader current="About Us"/>
       <Row className='row-content'>
         <Col sm='6'>
           <h3>Our Mission</h3>
@@ -20,7 +22,7 @@ function AboutPage() {
         </Col>
         <Col sm='6'>
           <Card>
-            <CardHeader className='bg-primary-text-white'>
+            <CardHeader className='bg-primary text-white'>
               <h3> Facts at a Glance</h3>
             </CardHeader>
             <CardBody>
@@ -37,7 +39,7 @@ function AboutPage() {
             </CardBody>
           </Card>
         </Col>
-        <Col sm='6'>
+        <Col ms='6' >
           <Card className='bg-light mt-3'>
             <CardBody>
               <blockquote className='blockquote'>
