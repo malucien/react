@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Partner({ partner }) {
   if (partner) {
     const { image, name, description } = partner;

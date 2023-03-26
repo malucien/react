@@ -4,14 +4,13 @@ export const selectAllPartners = () =>{
    return PARTNERS;
 };
 
+export const selectPartnerById = (id) => {
+  return PARTNERS.find((partner) => partner.id === parseInt(id));
+}
+
 export const selectFeaturedPartner = () => {
   return PARTNERS.find((partner) => partner.featured);
 };
 
 
 
-
-
-// export const selectFeaturedPromotion = () => {
-//   return PROMOTIONS.find((promotion) => promotion.featured);
-// };
