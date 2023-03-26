@@ -1,17 +1,17 @@
 import {Col, Row} from 'reactstrap';
 import DisplayCard from './DisplayCard';
-import {selectFeactedCampsite} from '../campsites/campsitesSlice';
+import {selectFeaturedCampsite} from '../campsites/campsitesSlice';
 import {selectFeaturedPromotion} from '../promotions/PromotionsSlice';
 
 const DisplayList = () => {
-  const items = [selectFeatureCampsite(), selectFeaturedPromotion()];
+  const items = [ selectFeaturedCampsite(), selectFeaturedPromotion()];
 
   return (
     <Row>
       {items.map((item, idx) => {
         return (
           <Col md className='m-1' key={idx}>
-            <DisplayCad item={item} />
+            <DisplayCard item={item} />
           </Col>
         )
       })}
