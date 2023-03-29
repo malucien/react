@@ -8,7 +8,7 @@ const campsiteCard = ({campsite}) => {
   return(
     <Link to={`${id}`}>
       <Card>
-        <CardImg with = "100%" src={image} alt={name}/>
+        <CardImg width = "100%" src={image} alt={name}/>
         <CardImgOverlay>
           <CardTitle>{name}</CardTitle>
         </CardImgOverlay>
