@@ -58,7 +58,7 @@ const ContactForm = () => {
           <Label htmlFor="email" md="2">
             Email
           </Label>
-          <Col md="10">
+          <Col md='10'>
             <Field
               name="email"
               placeholder="Email Address"
@@ -70,6 +70,11 @@ const ContactForm = () => {
         </FormGroup>
         <FormGroup row>
           <Label check md={{size:4, offset:2}}>
+            <Field
+              name="agree"
+              type="checkbox"
+              className="form-check-input"
+             />{""}
             May we contact you?
           </Label>
           <Col md="4">
