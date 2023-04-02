@@ -54,4 +54,13 @@ const CommentForm = ({ campsiteId }) => {
                   className='form-control'
                 />
               </FormGroup>
+              <FormGroup>
+                <Label htmlFor='commentText'>Comment</Label>
+                <Field
+                  name='commentText'
+                  as='textarea'
+                  rows='12'
+                  className='form-control'
+                />
+              </FormGroup>
 
