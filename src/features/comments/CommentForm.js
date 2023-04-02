@@ -16,5 +16,22 @@ const CommentForm = ({ campsiteId }) => {
     setModalOpen(false);
   };
 
- 
+  return (
+    <>
+      <Button outline onClick={() => setModalOpen(true)}>
+        <i className='fa fa-pencil fa-lg' /> Add Comment
+      </Button>
+      <Modal isOpen={modalOpen}>
+        <ModalHeader toggle={() => setModalOpen(false)}>
+          Add Comment
+        </ModalHeader>
+        <ModalBody>
+          <Formik
+            initialValues={{
+              rating: undefined,
+              author: '',
+              commentText: ''
+            }}
+            onSubmit={handleSubmit}
+          >
 
