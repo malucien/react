@@ -63,4 +63,16 @@ const CommentForm = ({ campsiteId }) => {
                   className='form-control'
                 />
               </FormGroup>
+              <Button type='submit' color='primary'>
+                Submit
+              </Button>
+            </Form>
+          </Formik>
+        </ModalBody>
+      </Modal>
+    </>
+  );
+};
+
+export default CommentForm;
 
