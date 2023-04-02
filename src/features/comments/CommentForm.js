@@ -34,4 +34,16 @@ const CommentForm = ({ campsiteId }) => {
             }}
             onSubmit={handleSubmit}
           >
+            <Form>
+              <FormGroup>
+                <Label htmlFor='rating'>Rating</Label>
+                <Field name='rating' as='select' className='form-control'>
+                  <option>Select...</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </Field>
+              </FormGroup>
 
