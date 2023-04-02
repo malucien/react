@@ -46,4 +46,12 @@ const CommentForm = ({ campsiteId }) => {
                   <option>5</option>
                 </Field>
               </FormGroup>
+              <FormGroup>
+                <Label htmlFor='author'>Your Name</Label>
+                <Field
+                  name='author'
+                  placeholder='Your Name'
+                  className='form-control'
+                />
+              </FormGroup>
 
