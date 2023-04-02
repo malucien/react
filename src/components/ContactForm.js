@@ -22,6 +22,7 @@ const ContactForm = () => {
           <Col md="10">
             <Field
               name="firstName"
+              placeholder="First Name"
               ClassName="form-control" 
             />
 
@@ -34,6 +35,7 @@ const ContactForm = () => {
           <Col md="10">
             <Field
               name="lastName"
+              placeholder="Last Name"
               ClassName="form-control" 
             />
 
@@ -46,6 +48,7 @@ const ContactForm = () => {
           <Col md="10">
             <Field
               name="phoneNum"
+              placeholder="Phone Number"
               ClassName="form-control" 
             />
 
@@ -58,6 +61,8 @@ const ContactForm = () => {
           <Col md="10">
             <Field
               name="email"
+              placeholder="Email Address"
+              tyoe="email"
               ClassName="form-control" 
             />
 
@@ -69,8 +74,13 @@ const ContactForm = () => {
           </Label>
           <Col md="4">
             <Field
+              name="contactType"
+              as="select"
               ClassName="form-control" 
-            />
+            >
+              <option>By Phone</option>
+              <option>By Email</option>
+            </Field>
 
           </Col>
         </FormGroup>
@@ -80,6 +90,9 @@ const ContactForm = () => {
           </Label>
           <Col md="10">
             <Field
+              name="feedBack"
+              as="textarea"
+              rows="12"
               ClassName="form-control" 
             />
 
