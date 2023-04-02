@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, FormGroup, Label } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, FormGroup, Label, Container } from 'reactstrap';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import { validateCommentForm } from '../../utils/validateCommentForm';
 
@@ -19,7 +19,7 @@ const CommentForm = ({ campsiteId }) => {
   };
 
   return (
-    <>
+    <Container>
       <Button outline onClick={() => setModalOpen(true)}>
         <i className='fa fa-pencil fa-lg' /> Add Comment
       </Button>
@@ -76,7 +76,7 @@ const CommentForm = ({ campsiteId }) => {
           </Formik>
         </ModalBody>
       </Modal>
-    </>
+    </Container>
   );
 };
 
