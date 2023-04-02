@@ -16,26 +16,57 @@ const ContactForm = () => {
     >
       <Form>
         <FormGroup row>
+          <Label>
+
+          </Label>
+          <Col md="10">
+          
+          </Col>
+        </FormGroup>
+        <FormGroup row>
+          <Label>
+
+          </Label>
+          <Col md="10">
+          
+          </Col>
+        </FormGroup>
+        <FormGroup row>
+          <Label>
+
+          </Label>
+          <Col md="10">
+          
+          </Col>
+        </FormGroup>
+        <FormGroup row>
+          <Label>
+
+          </Label>
+          <Col md="10">
+          
+          </Col>
+        </FormGroup>
+        <FormGroup row>
+          <Label>
+
+          </Label>
+          <Col md="4">
+          
+          </Col>
+        </FormGroup>
+        <FormGroup row>
+          <Label>
+
+          </Label>
+          <Col md="10">
+          
+          </Col>
+        </FormGroup>
+        <FormGroup row>
           
         </FormGroup>
-        <FormGroup row>
-
-        </FormGroup>
-        <FormGroup row>
-
-        </FormGroup>
-        <FormGroup row>
-
-        </FormGroup>
-        <FormGroup row>
-
-        </FormGroup>
-        <FormGroup row>
-
-        </FormGroup>
-        <FormGroup row>
-
-        </FormGroup>
+        
       </Form>
     </Formik>
   )
