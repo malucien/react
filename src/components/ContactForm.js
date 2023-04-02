@@ -1,5 +1,5 @@
-import {Button, Label, Col, FormGroup} from 'reactstrap';
-import {Formik, Field, Form} from 'formik';
+import { Button, Label, Col, FormGroup } from 'reactstrap';
+import { Formik, Field, Form } from 'formik';
 
 const ContactForm = () => {
   return (
@@ -9,7 +9,7 @@ const ContactForm = () => {
         lastName:'',
         phoneNum:'',
         email:'',
-        egree:false,
+        agree:false,
         contactType:'By Phone',
         feedBack:'',
       }}
@@ -23,7 +23,7 @@ const ContactForm = () => {
             <Field
               name="firstName"
               placeholder="First Name"
-              ClassName="form-control" 
+              className="form-control" 
             />
 
           </Col>
@@ -36,7 +36,7 @@ const ContactForm = () => {
             <Field
               name="lastName"
               placeholder="Last Name"
-              ClassName="form-control" 
+              className="form-control" 
             />
 
           </Col>
@@ -49,7 +49,7 @@ const ContactForm = () => {
             <Field
               name="phoneNum"
               placeholder="Phone Number"
-              ClassName="form-control" 
+              className="form-control" 
             />
 
           </Col>
@@ -62,8 +62,8 @@ const ContactForm = () => {
             <Field
               name="email"
               placeholder="Email Address"
-              tyoe="email"
-              ClassName="form-control" 
+              type="email"
+              className="form-control" 
             />
 
           </Col>
@@ -81,7 +81,7 @@ const ContactForm = () => {
             <Field
               name="contactType"
               as="select"
-              ClassName="form-control" 
+              className="form-control" 
             >
               <option>By Phone</option>
               <option>By Email</option>
@@ -98,15 +98,17 @@ const ContactForm = () => {
               name="feedBack"
               as="textarea"
               rows="12"
-              ClassName="form-control" 
+              className="form-control" 
             />
 
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Field
-              ClassName="form-control" 
-            />
+          <Col md={{ size: 10, offset: 2 }}>
+            <Button type="submit" color="primary">
+              Send Feedback
+            </Button>
+          </Col>
         </FormGroup>
         
       </Form>
