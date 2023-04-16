@@ -5,7 +5,7 @@ import {mapImageURL} from '../../utils/mapImageURL';
 export const fetchCampsites = createAsyncThunk(
   'campsites/fetchCampsite',
   async () => {
-    const response = await fetch(baseUrl + 'campsite');
+    const response = await fetch(baseUrl + 'campsites');
     if (!response.ok) {
       return Promise.reject('Unable to fetch, status:' + response.status);
     }
@@ -43,9 +43,10 @@ const campsitesSlice = createSlice({
 
 export const campsitesReducer = campsitesSlice.reducer;
 
-export const selectAllCampsites = () => {
-  return [];
+export const selectAllCampsites = (state) => {
+  return state.campsites.campsitesArray;
 };
+
 
 export const selectCampsiteById = (id) => (state) => {
   return state.campsites.campsitesArray.find(
@@ -53,6 +54,6 @@ export const selectCampsiteById = (id) => (state) => {
     );
 }
 
-export const selectFeaturedCampsite = () => {
-  return [].find((campsite) => campsite.featured);
-}
+export const selectFeaturedCampsite = (state) => {
+  return state.campsites.campsitesArray.find((campsite) => campsite.featured);
+};
