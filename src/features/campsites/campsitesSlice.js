@@ -31,7 +31,7 @@ const campsitesSlice = createSlice({
     },
     [fetchCampsites.fulfilled]: (state, action) => {
       state.isLoading = false;
-      satisfies.errMsg = '';
+      state.errMsg = '';
       state.campsitesArray = mapImageURL(action.payload);
     },
     [fetchCampsites.rejected]: (state, action) => {
@@ -44,7 +44,7 @@ const campsitesSlice = createSlice({
 export const campsitesReducer = campsitesSlice.reducer;
 
 export const selectAllCampsites = () => {
-  return CAMPSITES;
+  return [];
 };
 
 export const selectCampsiteById = (id) => (state) => {
@@ -54,5 +54,5 @@ export const selectCampsiteById = (id) => (state) => {
 }
 
 export const selectFeaturedCampsite = () => {
-  return CAMPSITES.find((campsite) => campsite.featured);
+  return [].find((campsite) => campsite.featured);
 }

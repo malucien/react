@@ -1,6 +1,10 @@
 import {Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
 const DisplayCard = ({ item }) => {
+  if (!item) {
+    return null; // or return a default component if appropriate
+  }
+
   const { image, name, description } = item;
 
   return (
