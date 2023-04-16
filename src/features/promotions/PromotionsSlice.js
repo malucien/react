@@ -29,6 +29,15 @@ const promotionsSlice = createSlice({
   extraReducers: {
     [fetchPromotions.pending]: (state) => {
       state.isLoading = true;
+    },
+    [fetchPromotions.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      state.errMsg = '';
+      state.promotionsArray = mapImageURL(action.payload);
+    },
+    [fetchPromotions.rejected]: (state, action) => {
+      state.isLoading= false;
+      state.errMsg= action.error ? action.errer.message: 'Fetch failed';
     }
   }
 });
