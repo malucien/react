@@ -19,12 +19,12 @@ const initialState = {
   isLoading: true,
   errMsg:'',
   extraReducers: {
-    [fetchPartner.pending]: (state) => {
+    [fetchPartners.pending]: (state, action) => {
       state.isLoading = false;
       state.errMsg = '';
       state.partnersArray = mapImageURL(action.payload);
     },
-    [fetchPartner.rejected]: (state, action) => {
+    [fetchPartners.rejected]: (state, action) => {
       state.isLoading = false;
       state.errMsg = action.error ? action.error.message : 'Fetch failed';
     }
@@ -42,8 +42,8 @@ export const selectAllPartners = (state) =>{
    return state.partners.partnersArray;
 };
 
-export const selectFeaturedPartner = () => {
-  return PARTNERS.find((partner) => partner.featured);
+export const selectFeaturedPartner = (state) => {
+  return state.partners.partnersArray.find((partner) => partner.featured);
 };
 
 
