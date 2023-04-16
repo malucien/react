@@ -7,7 +7,7 @@ export const fetchPromotions = createAsyncThunk(
   async () => {
     const response = await fetch(baseUrl + 'promotions');
     if (!response.ok) {
-      return Promotion.reject('Unable to fetch, status:' + response.status);
+      return Promise.reject('Unable to fetch, status:' + response.status);
     }
     const data = await response.json();
     return data;

@@ -12,7 +12,7 @@ import { fetchCampsites } from './features/campsites/campsitesSlice';
 import { fetchPartners } from './features/partners/PartnersSlice';
 import {fetchPromotions } from './features/promotions/PromotionsSlice';
 import './App.css';
-import { fetchPromotions } from './features/promotions/PromotionsSlice';
+
 
 
 
