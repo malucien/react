@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, FormGroup, Label, Container } from 'reactstrap';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import { validateCommentForm } from '../../utils/validateCommentForm';
+import { postComment } from '../comments/CommentsSlice';
+import { useDispatch } from 'react-redux';
 
 const CommentForm = ({ campsiteId }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  
+  const dispatch = useDispatch();
 
   const handleSubmit = values => {
     const comment = {
@@ -14,7 +16,7 @@ const CommentForm = ({ campsiteId }) => {
       author: values.author,
       text: values.commentText
     };
-    console.log(comment);
+    dispatch(postComment(comment));
     setModalOpen(false);
   };
 
@@ -41,19 +43,12 @@ const CommentForm = ({ campsiteId }) => {
               <FormGroup>
                 <Label htmlFor='rating'>Rating</Label>
                 <Field name='rating' as='select' className='form-control'>
-                
                   <option>Select...</option>
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
                   <option>4</option>
                   <option>5</option>
-                  <option>5</option>
-                  <option>5</option>
-                  <option>5</option>
-                  <option>5</option>
-                 
-                  
                 </Field>
                 <ErrorMessage name="rating">{(msg) => <p className="text-danger">{msg}</p>}</ErrorMessage>
               </FormGroup>
@@ -87,4 +82,3 @@ const CommentForm = ({ campsiteId }) => {
 };
 
 export default CommentForm;
-

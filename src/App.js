@@ -11,6 +11,8 @@ import AboutPage from './pages/AboutPage';
 import { fetchCampsites } from './features/campsites/campsitesSlice';
 import { fetchPartners } from './features/partners/PartnersSlice';
 import {fetchPromotions } from './features/promotions/PromotionsSlice';
+import { fetchComments } from './features/comments/CommentsSlice';
+
 import './App.css';
 
 
@@ -23,6 +25,7 @@ function App() {
     dispatch(fetchCampsites());
     dispatch(fetchPartners());
     dispatch(fetchPromotions());
+    dispatch(fetchComments());
   }, [dispatch]);
 
   return (

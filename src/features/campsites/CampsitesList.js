@@ -26,7 +26,7 @@ const CampsitesList = () => {
       <Row>
         <Error errMsg={errMsg} />
       </Row>
-    )
+    );
   }
 
   return (

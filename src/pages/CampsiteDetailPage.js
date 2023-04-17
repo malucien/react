@@ -32,7 +32,7 @@ const CampsiteDetailPage = () => {
 
     return (
       <Container>
-        <SubHeader current={campsite.name} detail={true} />
+        <SubHeader current={campsite?.name} detail={true} />
           <Row>{content}</Row>
       </Container>
   );

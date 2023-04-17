@@ -3,7 +3,7 @@ import { baseUrl } from '../../app/shared/baseUrl';
 import { mapImageURL } from '../../utils/mapImageURL';
 
 export const fetchPartners = createAsyncThunk(
-  'partnebr/fetchPartners',
+  'partner/fetchPartners',
   async () => {
     const response = await fetch(baseUrl + 'partners');
     if (!response.ok) {
