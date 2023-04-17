@@ -43,8 +43,14 @@ export const selectAllPartners = (state) =>{
 };
 
 export const selectFeaturedPartner = (state) => {
-  return state.partners.partnersArray.find((partner) => partner.featured);
-};
+  return { 
+    featureItem: state.partners.partnersArray.find(
+      (partner) => partner.featured
+      ),
+      isLoading: state.partners.isLoading,
+      errMsg: state.partners.errMsg,
+    };
+};    
 
 
 
