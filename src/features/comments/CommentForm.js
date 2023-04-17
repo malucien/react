@@ -14,7 +14,8 @@ const CommentForm = ({ campsiteId }) => {
       campsiteId: parseInt(campsiteId),
       rating: values.rating,
       author: values.author,
-      text: values.commentText
+      text: values.commentText,
+      date: values.date
     };
     dispatch(postComment(comment));
     setModalOpen(false);
@@ -34,7 +35,8 @@ const CommentForm = ({ campsiteId }) => {
             initialValues={{
               rating: undefined,
               author: '',
-              commentText: ''
+              commentText: '',
+              date:''
             }}
             onSubmit={handleSubmit}
             validate = {validateCommentForm}
