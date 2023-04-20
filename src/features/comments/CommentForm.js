@@ -54,6 +54,7 @@ const CommentForm = ({ campsiteId }) => {
                   <option>6</option>
                   <option>7</option>
                   <option>8</option>
+                  <option>9</option>
                   
                 </Field>
                 <ErrorMessage name="rating">{(msg) => <p className="text-danger">{msg}</p>}</ErrorMessage>
